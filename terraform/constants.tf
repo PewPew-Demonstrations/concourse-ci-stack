@@ -35,8 +35,3 @@ variable "worker_desired_capacity" {
   type = "string"
   default = 1
 }
-
-variable "ssh_key_name" {
-  type = "string"
-  default = ""
-}

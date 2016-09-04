@@ -14,7 +14,6 @@ variable "environment" {
   type = "string"
   description = "Set to either Development or Production"
 }
-
 variable "ecr" {
   type = "string"
 }
@@ -33,7 +32,11 @@ variable "hosted_zone_id" {
 }
 variable "hosted_zone_name" {
   type = "string"
-  description = "The base domain name to register a record under (must have a trailing '.') e.g. addevcloudservices.com.au."
+  description = "The base domain name to register a record under (must have a trailing '.') e.g. demo.ardel.io."
+}
+variable "ssh_key_name" {
+  type = "string"
+  description = "The SSH Key to use for access to concourse_admin"
 }
 variable "ssl_certificate_arn" {
   type = "string"
