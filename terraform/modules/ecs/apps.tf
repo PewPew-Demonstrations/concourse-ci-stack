@@ -127,6 +127,9 @@ resource "aws_ecs_service" "admin" {
     container_name = "concourse-admin"
     container_port = 8080
   }
+
+  depends_on = ["aws_iam_policy.ecs"]
+
 }
 
 resource "aws_ecs_service" "worker" {
