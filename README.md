@@ -42,5 +42,11 @@ This task is used to create and publish all necessary docker images into ECR reg
 AWS_ACCOUNT=<aws-account-id> ECR_REGION=<aws-region> make publish
 ```
 
+## TODO
+
+ - Create Asset Bucket as part of stack
+ - Create KMS Key as part of stack
+ - Upgrade to latest ConcourseCI version
+
 [1]: http://concourse.ci
 [2]: https://www.terraform.io
