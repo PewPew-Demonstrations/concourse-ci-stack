@@ -42,3 +42,8 @@ variable "ssl_certificate_arn" {
   type = "string"
   description = "ARN for an SSL cert that represents the ConcourseCI website"
 }
+variable "kms_access_roles" {
+  type = "list"
+  description = "Roles assigned encrypt/decrypt access to KMS Key"
+  default = []
+}

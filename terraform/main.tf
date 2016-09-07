@@ -91,3 +91,27 @@ module "route53" {
   elb_address = "${module.ecs.elb_address}"
   elb_zone_id = "${module.ecs.elb_zone_id}"
 }
+
+module "s3" {
+  source = "./modules/s3"
+  ecs_worker_role_name = "${module.ecs.worker_role_name}"
+  environment = "${var.environment}"
+  environment_id = "${random_id.environment_id.b64}"
+  iam_ci_user_arn = "${module.iam.ci_user_arn}"
+  name = "${var.name}"
+  owner = "${var.owner}"
+  role = "${var.role}"
+  team = "${var.team}"
+}
+
+module "iam" {
+  source = "./modules/iam"
+  ecs_worker_role_name = "${module.ecs.worker_role_name}"
+  environment = "${var.environment}"
+  environment_id = "${random_id.environment_id.b64}"
+  kms_access_roles = "${var.kms_access_roles}"
+  name = "${var.name}"
+  owner = "${var.owner}"
+  role = "${var.role}"
+  team = "${var.team}"
+}
