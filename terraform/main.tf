@@ -94,7 +94,7 @@ module "route53" {
 
 module "s3" {
   source = "./modules/s3"
-  ecs_worker_role_name = "${module.ecs.worker_role_name}"
+  ecs_worker_role_arn = "${module.ecs.worker_role_arn}"
   environment = "${var.environment}"
   environment_id = "${random_id.environment_id.b64}"
   iam_ci_user_arn = "${module.iam.ci_user_arn}"
