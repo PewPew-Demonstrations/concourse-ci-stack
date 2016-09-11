@@ -32,7 +32,7 @@ if [ -n "$CONCOURSE_GITHUB_ORG" ]; then
   args="$args --github-auth-team $CONCOURSE_GITHUB_ORG/all"
 fi
 
-export CONCOURSE_DB_URL=postgres://$CONCOURSE_DB_HOST:$CONCOURSE_DB_PORT/$CONCOURSE_DB?sslmode=disable
+export CONCOURSE_DB_URL=postgres://$PGUSER:$PGPASSWORD@$CONCOURSE_DB_HOST:$CONCOURSE_DB_PORT/$CONCOURSE_DB?sslmode=disable
 
 wait-for-it $CONCOURSE_DB_HOST:$CONCOURSE_DB_PORT -t 300
 if [ $? -ne 0 ]; then
