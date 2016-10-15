@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 COPY wait-for-it.sh /usr/local/bin/wait-for-it
 COPY dumb-init_1.1.1_amd64 /usr/local/bin/dumb-init
 
-ADD https://github.com/concourse/concourse/releases/download/v2.1.0/concourse_linux_amd64 /usr/local/bin/concourse
+ADD https://github.com/concourse/concourse/releases/download/v2.3.1/concourse_linux_amd64 /usr/local/bin/concourse
 
 WORKDIR /app
 
