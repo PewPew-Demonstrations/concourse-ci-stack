@@ -1,4 +1,4 @@
-# AD-ConcourseCI
+# Concourse CI Stack
 
 This project provisions a [ConcourseCI][1] environment using [terraform][2] and
 AWS ECS.
@@ -44,7 +44,7 @@ AWS_ACCOUNT=<aws-account-id> ECR_REGION=<aws-region> make publish
 
 ## TODO
 
- - Upgrade to latest ConcourseCI version
+ - (✓) Upgrade to latest ConcourseCI version
 
 [1]: http://concourse.ci
 [2]: https://www.terraform.io
